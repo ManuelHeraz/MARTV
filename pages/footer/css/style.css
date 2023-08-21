@@ -28,7 +28,7 @@ footer{
 
 
 
-.logo{
+.logoMar{
     width: 30%;
     height: auto;
     display: flex;
@@ -65,14 +65,14 @@ footer{
     font-size: 18px;
 }
 
-.menu-item a{
+.menu-itemF a{
     text-decoration: none;
     margin: 1rem 1.5rem;
     cursor: pointer;
     opacity: 0.6;
 }
 
-.menu-item:hover a{
+.menu-itemF:hover a{
     opacity: 1;
 }
 
