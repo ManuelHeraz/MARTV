@@ -5,7 +5,7 @@ const baseUrl = window.location.pathname.split('/pages/')[0];
 
 // Definir el template como string
 const navTemplate = `
-  <a href="#" class="logo"> 
+  <a href="https://manuelheraz.github.io/MarinaGaming/" class="logo"> 
     <i class='bx bxs-movie'></i> MAR TV
   </a>
 
