@@ -3,7 +3,7 @@ const footer = document.getElementById('footer');
 
 // Definir el template como string
 const footerTemplate = `
-  <img class="logoMar" src="https://media.discordapp.net/attachments/739583737045713027/1143001556816498788/MAR_blanco_.png?width=1202&height=676" alt="Logo de Marina Gaming">
+  <img class="logoMar" src="https://lh3.google.com/u/2/d/1Y2FY8HucV76hUs6HvRnuhPK8xUpRbQ6Z=w2000-h1944-iv1" alt="Logo de Marina Gaming">
   
   <div class="social-icons-container">
     <a href="https://www.facebook.com/MarinaGamingOfficial/"><i class='bx bxl-facebook-circle'></i></a>
@@ -20,7 +20,7 @@ const footerTemplate = `
     <li class="menu-itemF"><a href="https://discord.gg/XfqqrWNAhy">Contacto</a></li>
   </ul>
 
-  <span class="copyright">&copy; 2023, Marina Gaming. Todos los Derechos Reservados <br> Created by: <a href="https://github.com/ManuelHeraz">ManuelHeraz</a></span>
+  <span class="copyright">&copy; 2023, Marina Gaming. Todos los Derechos Reservados <br>Page Created by: <a href="https://github.com/ManuelHeraz">ManuelHeraz</a></span>
 `;
 
 // Renderizar el template dentro del footer
