@@ -21,8 +21,8 @@ iframe {
     min-height: 100vh;
 }
 .conten {
-    padding: 6rem 9% ;
-    background: linear-gradient(90deg,rgb(34, 36, 41), rgba(34, 36, 41, 0.5)), url("https://lh3.google.com/u/2/d/1gxkhU8ZV4dR1K_IpXCJN67oVCaUarT_z=w1878-h928-iv1");
+    padding: 3rem 9% ;
+    background: linear-gradient(90deg,rgb(34, 36, 41), rgba(34, 36, 41, 0.5)), url("https://lh3.google.com/u/1/d/1hYQ8NQtVcz2QmFNCCYtN9Zxe8OeU8Vr_=w1878-h928-iv1");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;   
@@ -59,24 +59,9 @@ iframe {
     color: #d8d8d8;
     font-weight: 300;
     font-size: 1.5rem;}
-    .video {
-        border: 0.12rem solid #d8d8d8;
-        padding: 0; /* Elimina el padding extra para que no desborde */
-        position: relative;
-        width: 100%;
-        overflow: hidden; /* Asegúrate de que no haya desplazamiento adicional */
-        padding-top: 56.25%; /* Relación de aspecto 16:9 */
-        background: #000; /* Fondo para videos no cargados */
-    }
-    
-    .video iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
+.video{ 
+    border: 0.12rem solid #d8d8d8;
+}
 .contvideos {
     padding: 0 9% ;
     margin: auto;    
