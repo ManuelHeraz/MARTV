@@ -1,75 +1,172 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Reset básico */
 * {
     font-family: 'Poppins', sans-serif;
-    margin:0; 
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline: none; 
-    border:none;
+    outline: none;
+    border: none;
     text-decoration: none;
     list-style: none;
-    transition: all .2s linear;
-}
-iframe {
-    width: 100%;
-    height: 100%;
+    transition: all 0.2s linear;
 }
 
+/* Contenedor principal */
 .container {
     background: #17191D;
     width: 100%;
     min-height: 100vh;
-}
-.conten {
-    padding: 3rem 9% ;
-    background: linear-gradient(90deg,rgb(34, 36, 41), rgba(34, 36, 41, 0.5)), url("https://prod-cdnugc-rockstargames.akamaized.net/ugc/gta5photo/n0pe-rg_kEmwqdWvQ8h1jw/0_0.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;   
-}
-.conten h1 {
-    font-weight: 400;
-    font-size: 2.3rem;
-    color: #e90000;
-}
-.conten p {
-    max-width: 45rem;
-    color: #d8d8d8;
-    font-size: 1rem;
-    margin: .5rem 0;
-    letter-spacing: .02rem;
-    font-weight: 300;    
-}
-.btn {
-    display: inline-block;
-    background: #ff0000;
-    border-radius: .2rem;
-    padding: .4rem 3rem;
-    color: #d8d8d8;
-    margin-top: .5rem;
-    font-size: 1rem;
-    box-shadow: 0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-.btn:hover {
-    background: #18227a;
+    overflow-x: hidden;
 }
 
-.title1 {
-    padding: 1rem 9% ;
+/* Sección de contenido */
+.conten {
+    padding: 3rem 9%;
+    background: linear-gradient(90deg, rgb(34, 36, 41), rgba(34, 36, 41, 0.5)), url("https://prod-cdnugc-rockstargames.akamaized.net/ugc/gta5photo/n0pe-rg_kEmwqdWvQ8h1jw/0_0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: #d8d8d8;
-    font-weight: 300;
-    font-size: 1.5rem;}
-.video{ 
-    border: 0.12rem solid #d8d8d8;
+    text-align: center;
 }
+
+.conten h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #e90000;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.conten p {
+    max-width: 45rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.02rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.conten .btn {
+    display: inline-block;
+    background: #ff0000;
+    border-radius: 0.3rem;
+    padding: 0.6rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    box-shadow: 0.15rem 0.15rem 0.5rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.conten .btn:hover {
+    background: #18227a;
+    transform: scale(1.05);
+}
+
+/* Título de temporada */
+.title1 {
+    padding: 1rem 9%;
+    color: #d8d8d8;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Contenedor de videos */
 .contvideos {
-    padding: 0 9% ;
-    margin: auto;    
-    display: grid;    
+    padding: 0 9%;
+    margin: auto;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 1.5rem;
     padding-bottom: 2rem;
 }
-.grupo2 {
-    background: #222429;
+
+.video {
+    position: relative;
+    border: 0.12rem solid #d8d8d8;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.video:hover {
+    transform: scale(1.05);
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Modal para pantalla completa */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+.modal.active {
+    display: flex;
+}
+.modal iframe {
+    width: 80%;
+    height: 80%;
+    border: none;
+    border-radius: 0.5rem;
+}
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+.close-modal:hover {
+    color: #ff0000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .conten h1 {
+        font-size: 2rem;
+    }
+    .conten p {
+        font-size: 0.9rem;
+    }
+    .title1 {
+        font-size: 1.2rem;
+    }
+    .video iframe {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .conten h1 {
+        font-size: 1.8rem;
+    }
+    .conten p {
+        font-size: 0.8rem;
+    }
+    .title1 {
+        font-size: 1rem;
+    }
+    .video iframe {
+        height: 120px;
+    }
 }

@@ -6,62 +6,79 @@
     <link rel="stylesheet" href="../../../css/nav.css">
     <link rel="stylesheet" href="css/serie.css">
     <link rel="stylesheet" href="../../footer/css/style.css">
-    <link rel="stylesheet" href="../../footer/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-
     <title>El Juego Del Engaño-MARTV</title>
 </head>
-
-<header id="navbar">
-
-</header>
-
 <body>
-
+    <header id="navbar"></header>
     <div class="container">
         <div class="conten">
-            <h1> El Juego del Engaño </h1>
+            <h1>El Juego del Engaño</h1>
             <p><b>En Emisión</b></p>
             <p>La Inspectora Isabel Arbesú se adentra en una investigación paralela en la P.G.R. para encontrar a su amiga y ex-compañera de escuadrón, la secretaria de Marina Ana Rodriguez. ¿Será capaz de encontrarla y resolver el misterio que la persigue? Acompaña a la inspectora en su peligrosa búsqueda y no te pierdas ni un solo capítulo de esta serie que te mantendrá al borde del asiento.</p>
-                <p><br><i><b>NOTA:</b> si el video aparece como "no disponible" dar click en "Mirar en youtube", se recomienda mirar en pantalla compelta! </i> <br></p>
-                <a class="btn" href="../../../index.html">Regresar al inicio</a>
+            <p><br><i><b>NOTA:</b> si el video aparece como "no disponible" dar click en "Mirar en youtube", se recomienda mirar en pantalla completa!</i><br></p>
+            <a class="btn" href="../../../index.html">Regresar al inicio</a>
         </div>
-        
+
         <div class="grupo">
-            <h1 class="title1"><i class="fa-brands fa-js-square"></i> Temporada 1 </h1>
-            <div class="contvideos">   
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JISYtzI4D9c?si=G65OWlg9_xn3yQ9_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
-                </div>                                         
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TSoEW_3RoWA?si=2FzVTVIsaT7xitDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
+            <h1 class="title1"><i class="fa-brands fa-js-square"></i> Temporada 1</h1>
+            <div class="contvideos">
+                <div class="video" data-video="https://www.youtube.com/embed/JISYtzI4D9c?si=G65OWlg9_xn3yQ9_">
+                    <iframe src="https://www.youtube.com/embed/JISYtzI4D9c?si=G65OWlg9_xn3yQ9_" allowfullscreen></iframe>
                 </div>
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gPmcpOCZ9bo?si=6bMv-8bzLyFL-kax" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
-                </div>                
-                <div class="video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/E6uVuaWnc68?si=EjRT0AUZ5pUkaFmV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+                <div class="video" data-video="https://www.youtube.com/embed/TSoEW_3RoWA?si=2FzVTVIsaT7xitDw">
+                    <iframe src="https://www.youtube.com/embed/TSoEW_3RoWA?si=2FzVTVIsaT7xitDw" allowfullscreen></iframe>
                 </div>
-                <div class="video">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkjKS4gNOJ7MD60FNP6PbBftSSiPbq7Mqf-A&s">            
+                <div class="video" data-video="https://www.youtube.com/embed/gPmcpOCZ9bo?si=6bMv-8bzLyFL-kax">
+                    <iframe src="https://www.youtube.com/embed/gPmcpOCZ9bo?si=6bMv-8bzLyFL-kax" allowfullscreen></iframe>
                 </div>
-                
-
-        </div>
-
-
+                <div class="video" data-video="https://www.youtube.com/embed/E6uVuaWnc68?si=EjRT0AUZ5pUkaFmV">
+                    <iframe src="https://www.youtube.com/embed/E6uVuaWnc68?si=EjRT0AUZ5pUkaFmV" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
     </div>
 
-    <footer id="footer">
+    <!-- Modal -->
+    <div class="modal" id="videoModal">
+        <span class="close-modal">&times;</span>
+        <iframe id="modalVideo" src="" allowfullscreen></iframe>
+    </div>
 
-    </footer>
+    <footer id="footer"></footer>
 
+    <!-- Scripts -->
     <script src="../../navbar/js/navbar.js"></script>
     <script src="../../../js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="../../footer/js/footer.js"></script>
+    <script>
+        // Script para abrir videos en pantalla completa
+        const videos = document.querySelectorAll('.video');
+        const modal = document.getElementById('videoModal');
+        const modalVideo = document.getElementById('modalVideo');
+        const closeModal = document.querySelector('.close-modal');
 
+        videos.forEach(video => {
+            video.addEventListener('click', () => {
+                const videoSrc = video.getAttribute('data-video');
+                modalVideo.src = videoSrc;
+                modal.classList.add('active');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('active');
+            modalVideo.src = ''; // Detener el video al cerrar
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                modalVideo.src = '';
+            }
+        });
+    </script>
 </body>
 </html>
