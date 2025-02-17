@@ -133,6 +133,89 @@ section {
     margin-top: 2rem;
 }
 
+.fotos {
+    padding: 4rem 0;
+    color: #fff;
+    text-align: center;
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenedor del carrusel */
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    animation: scroll-left 15s linear infinite; /* Animación de desplazamiento */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Ancho de cada imagen */
+    margin-right: 1rem;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img:hover {
+    transform: scale(1.05); /* Efecto zoom al pasar el mouse */
+}
+
+/* Botón "VER TODAS LAS FOTOS" */
+.view-all {
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.view-all .btn {
+    display: inline-block;
+    background: var(--main-color);
+    color: var(--bg-color);
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-right: 5%;
+}
+
+.view-all .btn:hover {
+    background: var(--text-color);
+    transform: scale(1.05);
+}
+
+/* Animación del carrusel */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
 .box {
     position: relative;
     overflow: hidden;
@@ -236,6 +319,17 @@ section {
     .movies-container {
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
+    .carousel-item {
+        width: 200px; /* Reducir el ancho de las imágenes en pantallas pequeñas */
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .view-all {
+        text-align: center; /* Centrar el botón en móviles */
+    }
 }
 
 @media (max-width: 370px) {
@@ -257,5 +351,13 @@ section {
     }
     .box .box-img {
         height: 240px;
+    }
+    .carousel-item {
+        width: 150px; /* Reducir aún más el ancho en móviles pequeños */
+    }
+
+    .view-all .btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
