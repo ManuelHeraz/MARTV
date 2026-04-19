@@ -16,13 +16,18 @@ const navTemplate = `
       <a href="${baseUrl}/index.html#home" class="home-active">Inicio</a>
     </li>
     <li>
+      <a href="#" style="color: #ff3b3b; font-weight: bold; display: flex; align-items: center; gap: 5px;">
+        🔴 EN VIVO
+      </a>
+    </li>
+    <li>
       <a href="${baseUrl}/index.html#series">Series</a>
     </li>
     <li>
-      <a href="${baseUrl}/index.html#movies">Peliculas</a>
+      <a href="${baseUrl}/index.html#movies">Películas</a>
     </li>
     <li>
-      <a href="${baseUrl}/index.html#coming">Proximamente</a>
+      <a href="${baseUrl}/index.html#coming">Próximamente</a>
     </li>
     <li>
       <a href="${baseUrl}/index.html#newsletter">Contacto</a>
